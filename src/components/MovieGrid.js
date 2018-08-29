@@ -7,7 +7,6 @@ function MovieGrid(props) {
       {props.movies.map((movie, index) => {
         return (
           <li key={movie.title} className="discover-item">
-            <div className="popular-rank">#{index + 1}</div>
             <ul className="space-list-items">
               <li>
                 <img
@@ -19,7 +18,7 @@ function MovieGrid(props) {
               <li>
                 <p className="movie-title">{movie.title}</p>
               </li>
-              <li className="movie-points">{movie.vote_average} Points</li>
+              <li className="movie-points">{movie.vote_average}/10</li>
             </ul>
           </li>
         );

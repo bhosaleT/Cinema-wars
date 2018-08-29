@@ -22,7 +22,7 @@ function SelectGenre(props) {
           <li
             style={
               index.id === props.selectedGenre
-                ? { background: "#d3d3d3" }
+                ? { background: "#888888",color: "#ffffff", textTransform:"uppercase"}
                 : null
             }
             onClick={props.onSelect.bind(null, index.id)}
