@@ -17,7 +17,6 @@ export default class Popular extends React.Component {
   }
 
   updateGenre(genre) {
-    console.log(genre);
     this.setState(() => {
       return {
         selectedGenre: genre,
