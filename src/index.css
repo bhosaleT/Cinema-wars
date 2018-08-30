@@ -39,7 +39,7 @@ li {
 }
 
 .home-container {
-  background: linear-gradient(to right, #27272793),
+  background: linear-gradient(to bottom right, #272727bd),
     url("./components/background.jpg");
   width: 100%;
   min-height: 100vh;
@@ -59,12 +59,23 @@ li {
 
 .button {
   text-decoration: none;
+  text-transform: uppercase;
   color: #272727;
   background: #eeeeee;
   padding: 10px 30px 10px 30px;
   border-radius: 10px;
   border: 1px solid black;
-  box-shadow: 2px 3px #888888;
+  /* box-shadow: 2px 3px #888888; */
+  transition: all .2s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0,0, 0.9);
+}
+.button:active {
+  transform: translateY(-1px);
+   box-shadow: 0 5px 10px rgba(0, 0,0, 0.9);
 }
 
 .nav-link {
@@ -108,7 +119,7 @@ li {
 }
 
 @media (max-width: 600px) {
-  .header{
+  .header {
     grid-template-rows: 1fr 1fr;
   }
   .nav {
@@ -125,12 +136,12 @@ li {
   .header p {
     grid-column: 1/-1;
   }
-  .home-container{
+  .home-container {
     padding-top: 100px;
   }
   .home-container p {
-  padding: 0 10px 0 10px;
-}
+    padding: 0 10px 0 10px;
+  }
 }
 
 .genre-list li {
@@ -146,7 +157,7 @@ li {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
-  margin: 0 10px;
+  margin: 0 20px 20px 20px;
 }
 
 .discover-item {
@@ -229,4 +240,15 @@ li {
   padding: 10px 20px 10px 20px;
   height: 260px;
   text-align: left;
+}
+
+.footer{
+  background: #272727;
+  height: 40px;
+  margin: 0;
+  display: grid;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  text-transform: uppercase;
 }
