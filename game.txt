@@ -1,0 +1,11 @@
+api url: https://api.themoviedb.org/3/discover/movie?api_key=###&with_genres=16,28
+api key : e011c26b2539dbf71409396edede6631
+
+genre Name    Genre ID
+Action         28
+Animation      16
+Comedy         35
+Documentry      99
+Drama           18
+Horror          27
+Romance         10749

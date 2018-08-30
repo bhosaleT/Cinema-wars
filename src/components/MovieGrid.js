@@ -18,7 +18,15 @@ function MovieGrid(props) {
               <li>
                 <p className="movie-title">{movie.title}</p>
               </li>
-              <li className="movie-points">{movie.vote_average}/10</li>
+              <li className="movie-points">
+                {movie.vote_average}
+                /10
+              </li>
+              <div className="overlay">
+                <h3 className="overview-heading">Overview</h3>
+                <p className="text">"{movie.overview}"</p>
+                <p className="release-date">{movie.release_date}</p>
+              </div>
             </ul>
           </li>
         );

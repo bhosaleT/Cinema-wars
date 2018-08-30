@@ -79,6 +79,7 @@ li {
   text-align: center;
   background: #d3d3d3;
   border-radius: 10px;
+  position: relative;
   /* padding: 5px; */
   /* grid-gap: 10px; */
   box-shadow: 5px 10px #888888;
@@ -113,4 +114,46 @@ li {
   padding: 10px;
   margin: 0 40px 5px 40px;
   border-radius: 30px;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  /* display: grid; */
+  left: 0;
+  right: 0;
+  background-color:#d3d3d3;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  /* transform: scale(0); */
+  transition: .4s ease-out;
+  border-radius: 10px;
+
+}
+
+.discover-item:hover .overlay {
+  height: 99%;
+    border: 2px solid black;
+
+}
+
+.overview-heading {
+  background: #272727;
+  padding: 5px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.release-date {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+}
+
+.text {
+  color: #272727;
+  font-size: 14px;
+  padding: 10px 20px 10px 20px;
+  height: 260px;
+  text-align: left;
 }

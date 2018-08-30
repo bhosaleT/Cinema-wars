@@ -7,7 +7,7 @@ function SelectGenre(props) {
     { id: 28, name: "Action" },
     { id: 16, name: "Animation" },
     { id: 35, name: "Comedy" },
-    { id: 18, name: "Drama" },
+    { id: 14, name: "Fantasy" },
     { id: 27, name: "Horror" },
     { id: 10749, name: "Romance" },
     { id: 36, name: "History" },
