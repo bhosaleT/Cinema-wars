@@ -8,7 +8,6 @@ function Header(props) {
       <ul className="nav">
         <li>
           <NavLink className="nav-link" activeClassName="active" exact to="/">
-            {" "}
             Home
           </NavLink>
         </li>

@@ -16,7 +16,7 @@ export default class App extends React.Component {
           <Switch>
             <Route path="/popular" component={Popular} />
             <Route exact path="/" component={Home} />
-            <Route path="/arena" component={Arena} />
+            <Route exact path="/arena" component={Arena} />
             <Route
               render={() => {
                 return (
