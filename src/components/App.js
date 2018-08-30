@@ -1,7 +1,8 @@
 import React from "react";
 import Popular from "./Popular";
 import Header from "./Header";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from './Home';
+import { BrowserRouter, Route} from "react-router-dom";
 
 export default class App extends React.Component {
   render() {
@@ -11,6 +12,7 @@ export default class App extends React.Component {
         <div>
           <Header heading={heading} />
           <Route path="/popular" component={Popular} />
+          <Route exact path="/" component={Home} />
         </div>
       </BrowserRouter>
     );
