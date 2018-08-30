@@ -1,9 +1,10 @@
 import React from "react";
 import Popular from "./Popular";
 import Header from "./Header";
-import Home from './Home';
-import Footer from './Footer';
-import { BrowserRouter, Route} from "react-router-dom";
+import Home from "./Home";
+import Footer from "./Footer";
+import Arena from "./Arena";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 export default class App extends React.Component {
   render() {
@@ -12,9 +13,33 @@ export default class App extends React.Component {
       <BrowserRouter>
         <div>
           <Header heading={heading} />
-          <Route path="/popular" component={Popular} />
-          <Route exact path="/" component={Home} />
-          <Footer/>
+          <Switch>
+            <Route path="/popular" component={Popular} />
+            <Route exact path="/" component={Home} />
+            <Route path="/arena" component={Arena} />
+            <Route
+              render={() => {
+                return (
+                  <div className="fourofour" >
+                    <iframe
+                      src="https://giphy.com/embed/NTXqH1bUCfHBS"
+                      width="480"
+                      height="322"
+                      frameBorder="0"
+                      class="giphy-embed"
+                      allowFullScreen
+                    />
+                    <p>
+                      <a href="https://giphy.com/gifs/404-NTXqH1bUCfHBS">
+                        via GIPHY
+                      </a>
+                    </p>
+                  </div>
+                );
+              }}
+            />
+          </Switch>
+          <Footer />
         </div>
       </BrowserRouter>
     );
