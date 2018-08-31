@@ -11,8 +11,6 @@ class Arena extends React.Component {
     this.state = {
       movieOneName: "",
       movieTwoName: "",
-      movieOneScore: null,
-      movieTwoScore: null,
       movieOneImage: null,
       movieTwoImage: null
     };
@@ -21,22 +19,15 @@ class Arena extends React.Component {
   }
 
   handleSubmit(id, moviename) {
-    console.log(moviename);
     api.searchMovies(moviename).then(movie => {
       const imageUrl = movie.poster_path;
       const movieName = movie.title;
-      const movieScore = movie.vote_average;
-
       this.setState(() => {
         var newState = {};
         newState[id + "Name"] = movieName;
         newState[id + "Image"] = `https://image.tmdb.org/t/p/w300${imageUrl}`;
-        newState[id + "Score"] = movieScore;
         return newState;
       });
-      console.log(this.state.movieOneImage, this.state.movieOneName);
-      console.log(this.state.movieTwoImage, this.state.movieTwoName);
-      console.log(this.state.movieOneScore, this.state.movieTwoScore);
     });
   }
 
@@ -54,8 +45,7 @@ class Arena extends React.Component {
     const movieTwoName = this.state.movieTwoName;
     const movieOneImage = this.state.movieOneImage;
     const movieTwoImage = this.state.movieTwoImage;
-    const movieOneScore = this.state.movieOneScore;
-    const movieTwoScore = this.state.movieTwoScore;
+
     return (
       <div className="arena-container">
         <Popup
@@ -77,7 +67,6 @@ class Arena extends React.Component {
           )}
           {movieOneImage !== null && (
             <MoviePreview
-              movieOneScore={movieOneScore}
               avatar={movieOneImage}
               movieName={movieOneName}
               onReset={this.handleReset}
@@ -93,7 +82,6 @@ class Arena extends React.Component {
           )}
           {movieTwoImage !== null && (
             <MoviePreview
-              movieTwoScore={movieTwoScore}
               avatar={movieTwoImage}
               movieName={movieTwoName}
               onReset={this.handleReset}

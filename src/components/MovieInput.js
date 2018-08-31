@@ -20,7 +20,7 @@ export default class MovieInput extends React.Component {
     });
   }
   handleSubmit(event) {
-      console.log(this.state.moviename)
+      // console.log(this.state.moviename)
       event.preventDefault();
       this.props.onSubmit(
           this.props.id,
