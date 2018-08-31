@@ -4,6 +4,7 @@ import Header from "./Header";
 import Home from "./Home";
 import Arena from "./Arena";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Results from "./Results";
 
 export default class App extends React.Component {
   render() {
@@ -16,10 +17,11 @@ export default class App extends React.Component {
             <Route path="/popular" component={Popular} />
             <Route exact path="/" component={Home} />
             <Route exact path="/arena" component={Arena} />
+            <Route path="/arena/results" component={Results} />
             <Route
               render={() => {
                 return (
-                  <div className="fourofour" >
+                  <div className="fourofour">
                     <iframe
                       src="https://giphy.com/embed/NTXqH1bUCfHBS"
                       width="480"

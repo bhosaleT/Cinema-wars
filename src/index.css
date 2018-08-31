@@ -116,7 +116,7 @@ li {
     grid-template-columns: repeat(3, 80px);
     grid-column: 5/7;
   }
-  .form-container{
+  .form-container {
     margin: 50px 200px;
     grid-template-rows: 1fr 1fr;
   }
@@ -308,11 +308,11 @@ li {
 }
 
 #moviename {
-border-radius: 10px;
-padding: 10px;
-width: 200px;
-margin-bottom: 30px;
-border: 0px solid #272727
+  border-radius: 10px;
+  padding: 10px;
+  width: 200px;
+  margin-bottom: 30px;
+  border: 0px solid #272727;
 }
 
 #moviename:focus {
@@ -320,7 +320,7 @@ border: 0px solid #272727
   outline: none;
 }
 
-.button-form{
+.button-form {
   text-decoration: none;
   text-transform: uppercase;
   color: #272727;
@@ -341,10 +341,10 @@ border: 0px solid #272727
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.9);
 }
 
-.reset{
+.reset {
   text-align: center;
   margin-left: 100px;
-  padding: 10px 30px;;
+  padding: 10px 30px;
   margin-top: 20px;
   background: #eeeeee;
   font-weight: bold;
@@ -361,7 +361,7 @@ border: 0px solid #272727
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
 }
 
-.button-link{
+.button-link {
   text-decoration: none;
   text-transform: uppercase;
   background: #272727;
@@ -383,11 +383,11 @@ border: 0px solid #272727
 }
 
 /* =====================================POPUP============================ */
-.trigger-button{
+.trigger-button {
   color: white;
   background: #272727;
   padding: 10px;
-  margin: 35px 10px;
+  margin: 35px 0 0 10px;
   font-size: 15px;
   border-radius: 10px;
   outline: none;
@@ -403,8 +403,7 @@ border: 0px solid #272727
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
 }
 
-
-.popup-message{
+.popup-message {
   padding: 5px;
   /* background: #d3d3d3; */
 }

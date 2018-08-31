@@ -43,6 +43,7 @@ class Arena extends React.Component {
     });
   }
   render() {
+    const match = this.props.match;
     const movieOneName = this.state.movieOneName;
     const movieTwoName = this.state.movieTwoName;
     const movieOneImage = this.state.movieOneImage;
@@ -92,7 +93,17 @@ class Arena extends React.Component {
         </div>
         {movieOneImage &&
           movieTwoImage && (
-            <Link className="button-link" to="/">
+            <Link
+              className="button-link"
+              to={{
+                pathname: match.url + "/results",
+                search:
+                  "?movieOneName=" +
+                  movieOneName +
+                  "&movieTwoName=" +
+                  movieTwoName
+              }}
+            >
               Battle
             </Link>
           )}
