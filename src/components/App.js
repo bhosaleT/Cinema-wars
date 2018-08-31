@@ -2,7 +2,6 @@ import React from "react";
 import Popular from "./Popular";
 import Header from "./Header";
 import Home from "./Home";
-import Footer from "./Footer";
 import Arena from "./Arena";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
@@ -39,7 +38,6 @@ export default class App extends React.Component {
               }}
             />
           </Switch>
-          <Footer />
         </div>
       </BrowserRouter>
     );
