@@ -369,7 +369,7 @@ border: 0px solid #272727
   font-size: 30px;
   text-align: center;
   padding: 10px 30px;
-  margin: 0 900px;
+  margin: 0 875px;
   border-radius: 10px;
 }
 
@@ -382,3 +382,29 @@ border: 0px solid #272727
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
 }
 
+/* =====================================POPUP============================ */
+.trigger-button{
+  color: white;
+  background: #272727;
+  padding: 10px;
+  margin: 35px 10px;
+  font-size: 15px;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+.trigger-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.9);
+}
+.trigger-button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.9);
+}
+
+
+.popup-message{
+  padding: 5px;
+  /* background: #d3d3d3; */
+}

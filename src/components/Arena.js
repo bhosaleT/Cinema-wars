@@ -2,6 +2,7 @@ import React from "react";
 import api from "../utils/api";
 import MovieInput from "./MovieInput";
 import MoviePreview from "./MoviePreview";
+import Popup from "reactjs-popup";
 import { Link } from "react-router-dom";
 
 class Arena extends React.Component {
@@ -48,6 +49,15 @@ class Arena extends React.Component {
     const movieTwoImage = this.state.movieTwoImage;
     return (
       <div className="arena-container">
+        <Popup
+          trigger={<button className="trigger-button">Lost?</button>}
+          position="right center"
+        >
+          <div className="popup-message">
+            Enter the name of your two favourite movies and hit the battle
+            button see the magic happen!
+          </div>
+        </Popup>
         <div className="form-container">
           {!movieOneName && (
             <MovieInput
