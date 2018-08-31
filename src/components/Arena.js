@@ -1,6 +1,8 @@
 import React from "react";
 import api from "../utils/api";
 import MovieInput from "./MovieInput";
+import MoviePreview from "./MoviePreview";
+import { Link } from "react-router-dom";
 
 class Arena extends React.Component {
   constructor(props) {
@@ -12,6 +14,7 @@ class Arena extends React.Component {
       movieTwoImage: null
     };
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleReset = this.handleReset.bind(this);
   }
 
   handleSubmit(id, moviename) {
@@ -27,21 +30,38 @@ class Arena extends React.Component {
         return newState;
       });
       console.log(this.state.movieOneImage, this.state.movieOneName);
-        console.log(this.state.movieTwoImage, this.state.movieTwoName);
-
+      console.log(this.state.movieTwoImage, this.state.movieTwoName);
+    });
+  }
+  handleReset(id) {
+    this.setState(() => {
+      var newState = {};
+      newState[id + "Name"] = "";
+      newState[id + "Image"] = null;
+      return newState;
     });
   }
   render() {
     const movieOneName = this.state.movieOneName;
     const movieTwoName = this.state.movieTwoName;
+    const movieOneImage = this.state.movieOneImage;
+    const movieTwoImage = this.state.movieTwoImage;
     return (
-      <div>
+      <div className="arena-container">
         <div className="form-container">
           {!movieOneName && (
             <MovieInput
               id="movieOne"
               label="Movie One"
               onSubmit={this.handleSubmit}
+            />
+          )}
+          {movieOneImage !== null && (
+            <MoviePreview
+              avatar={movieOneImage}
+              movieName={movieOneName}
+              onReset={this.handleReset}
+              id="movieOne"
             />
           )}
           {!movieTwoName && (
@@ -51,7 +71,21 @@ class Arena extends React.Component {
               onSubmit={this.handleSubmit}
             />
           )}
+          {movieTwoImage !== null && (
+            <MoviePreview
+              avatar={movieTwoImage}
+              movieName={movieTwoName}
+              onReset={this.handleReset}
+              id="movieTwo"
+            />
+          )}
         </div>
+        {movieOneImage &&
+          movieTwoImage && (
+            <Link className="button-link" to="/">
+              Battle
+            </Link>
+          )}
       </div>
     );
   }
