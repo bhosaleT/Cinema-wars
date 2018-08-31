@@ -387,9 +387,9 @@ li {
   color: white;
   background: #272727;
   padding: 10px;
-  margin: 35px 0 0 10px;
+  margin: 35px 0 0 0;
   font-size: 15px;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   outline: none;
   border: none;
 }

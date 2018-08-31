@@ -4,7 +4,8 @@ import PropTypes from "prop-types";
 function MoviePreview(props) {
   return (
     <div className="movie-preview">
-      <div className="discover-item">
+      <div
+        className="discover-item">
         <img
           className="poster"
           src={props.avatar}
