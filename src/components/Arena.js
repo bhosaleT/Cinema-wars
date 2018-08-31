@@ -27,6 +27,8 @@ class Arena extends React.Component {
         return newState;
       });
       console.log(this.state.movieOneImage, this.state.movieOneName);
+        console.log(this.state.movieTwoImage, this.state.movieTwoName);
+
     });
   }
   render() {
