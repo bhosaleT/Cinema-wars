@@ -59,9 +59,12 @@ export default class Results extends React.Component {
     }
 
     return (
+      <div className="arena-container">
       <div className="form-container">
         <Movie label="winner" score={winner.vote_average} movie={winner} />
         <Movie label="loser" score={loser.vote_average} movie={loser} />
+      </div>
+      <Link className = "button-link" to={process.env.PUBLIC_URL + "/arena"}> Reset </Link>
       </div>
     );
   }
