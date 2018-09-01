@@ -2,7 +2,7 @@
   "name": "videogame-battle",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://bhosaleT.github.io/Cinema-wars/",
+  "homepage": "https://bhosaleT.github.io/Cinema-wars",
   "dependencies": {
     "axios": "^0.18.0",
     "gh-pages": "^1.2.0",
