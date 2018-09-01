@@ -15,7 +15,7 @@ export default class App extends React.Component {
           <Header heading={heading} />
           <Switch>
             <Route path="/popular" component={Popular} />
-            <Route exact path="/" component={Home} />
+            <Route exact path="/cinema-wars" component={Home} />
             <Route exact path="/arena" component={Arena} />
             <Route path="/arena/results" component={Results} />
             <Route
