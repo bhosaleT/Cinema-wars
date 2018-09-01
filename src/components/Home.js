@@ -11,7 +11,7 @@ export default class Home extends React.Component {
           better once and for all.. after you are done playing with that
           checkout the discover section to see a curated list of new movies.
         </p>
-        <Link className="button" to="/arena">
+        <Link className="button" to={process.env.PUBLIC_URL +"/arena"}>
           Arena
         </Link>
       </div>
