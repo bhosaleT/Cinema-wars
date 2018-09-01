@@ -7,7 +7,7 @@ function Header(props) {
       <p>{props.heading}</p>
       <ul className="nav">
         <li>
-          <NavLink className="nav-link" activeClassName="active" exact to="/">
+          <NavLink className="nav-link" activeClassName="active" exact to={process.env.PUBLIC_URL + '/'}>
             Home
           </NavLink>
         </li>
