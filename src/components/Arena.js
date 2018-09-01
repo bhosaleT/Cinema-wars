@@ -4,6 +4,7 @@ import MovieInput from "./MovieInput";
 import MoviePreview from "./MoviePreview";
 import Popup from "reactjs-popup";
 import { Link } from "react-router-dom";
+import Loading from './Loading';
 
 class Arena extends React.Component {
   constructor(props) {
@@ -50,7 +51,7 @@ class Arena extends React.Component {
       <div className="arena-container">
         <Popup
           trigger={<button className="trigger-button">Lost?</button>}
-          position="right center"
+          position="right top"
         >
           <div className="popup-message">
             Enter the name of your two favourite movies and hit the battle
@@ -65,6 +66,7 @@ class Arena extends React.Component {
               onSubmit={this.handleSubmit}
             />
           )}
+
           {movieOneImage !== null && (
             <MoviePreview
               avatar={movieOneImage}

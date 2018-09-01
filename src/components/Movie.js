@@ -44,7 +44,7 @@ function Movie(props) {
 Movie.propTypes = {
   label: PropTypes.string.isRequired,
   score: PropTypes.number.isRequired,
-  profile: PropTypes.object.isRequired
+  movie: PropTypes.object.isRequired
 };
 
 export default Movie;

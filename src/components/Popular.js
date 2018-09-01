@@ -2,6 +2,7 @@ import React from "react";
 import SelectGenre from "./SelectGenre";
 import MovieGrid from "./MovieGrid";
 import api from "../utils/api";
+import Loading from './Loading';
 
 export default class Popular extends React.Component {
   constructor(props) {
@@ -45,7 +46,7 @@ export default class Popular extends React.Component {
         />
         {/* check if the movies state is null if not then render the MovieGrid component */}
         {!this.state.movies ? (
-          <p>LOADING</p>
+         <Loading />
         ) : (
           <MovieGrid movies={this.state.movies} />
         )}

@@ -3,6 +3,7 @@ import queryString from "query-string";
 import api from "../utils/api";
 import { Link } from "react-router-dom";
 import Movie from "./Movie";
+import Loading from "./Loading";
 
 export default class Results extends React.Component {
   constructor(props) {
@@ -46,7 +47,7 @@ export default class Results extends React.Component {
     const loading = this.state.loading;
 
     if (loading === true) {
-      return <p>Loading</p>;
+      return <Loading text = 'Battling' />;
     }
     if (error) {
       return (
