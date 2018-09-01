@@ -9,26 +9,49 @@ import Results from "./Results";
 export default class App extends React.Component {
   render() {
     const heading = "Cinema Wars";
-    return <BrowserRouter>
+    return (
+      <BrowserRouter>
         <div>
           <Header heading={heading} />
           <Switch>
-            <Route path="/popular" component={Popular} />
-            <Route exact path={process.env.PUBLIC_URL + '/'} component={Home} />
-            <Route exact path="/arena" component={Arena} />
-            <Route path="/arena/results" component={Results} />
-            <Route render={() => {
-                return <div className="fourofour">
-                    <iframe src="https://giphy.com/embed/NTXqH1bUCfHBS" width="480" height="322" frameBorder="0" class="giphy-embed" allowFullScreen />
+            <Route
+              path={process.env.PUBLIC_URL + "/popular"}
+              component={Popular}
+            />
+            <Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
+            <Route
+              exact
+              path={process.env.PUBLIC_URL + "/arena"}
+              component={Arena}
+            />
+            <Route
+              path={process.env.PUBLIC_URL + "/arena/results"}
+              component={Results}
+            />
+            <Route
+              render={() => {
+                return (
+                  <div className="fourofour">
+                    <iframe
+                      src="https://giphy.com/embed/NTXqH1bUCfHBS"
+                      width="480"
+                      height="322"
+                      frameBorder="0"
+                      class="giphy-embed"
+                      allowFullScreen
+                    />
                     <p>
                       <a href="https://giphy.com/gifs/404-NTXqH1bUCfHBS">
                         via GIPHY
                       </a>
                     </p>
-                  </div>;
-              }} />
+                  </div>
+                );
+              }}
+            />
           </Switch>
         </div>
-      </BrowserRouter>;
+      </BrowserRouter>
+    );
   }
 }
