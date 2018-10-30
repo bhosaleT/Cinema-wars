@@ -15,6 +15,9 @@ To start the project run `npm start` from the terminal.
 * [React](https://reactjs.org/) - React Front-End Framework.
 * [The Movie DB API](https://www.themoviedb.org/?language=en-US) - The Movie DB API.
 
+## Live Demo
+* [Cinema - Wars](https://bhosalet.github.io/Cinema-wars/) - Live Demo
+
 ## ScreenShots
 ### Home Screen
 ![Home Screen](/screenshots/cinemaHomeScreen.png)
